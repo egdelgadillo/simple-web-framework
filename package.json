@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "http-server": "^0.12.3",
     "ts-loader": "^8.0.14",
     "webpack": "^5.12.3",
