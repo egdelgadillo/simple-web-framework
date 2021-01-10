@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start:db": "json-server --watch db.json",
-    "start:parcel": "http-server ./dist",
+    "start:parcel": "http-server",
     "start": "npm run build && concurrently npm:start:*",
-    "build": "webpack && cp index.html dist"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
