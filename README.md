@@ -12,6 +12,12 @@ The objective of this framework is not to add to the open source community as it
 
 - [Table of contents](#table-of-contents)
 - [What I've learned](#what-ive-learned)
+  - [Composition vs Inheritance](#composition-vs-inheritance)
+  - [MVP](#mvp)
+  - [Typescript Generics](#typescript-generics)
+  - [Typescript's `<any>` type](#typescripts-any-type)
+  - [Frontend technologies](#frontend-technologies)
+  - [Dependency Injection](#dependency-injection)
 - [Run](#run)
 - [Required Modules](#required-modules)
   - [Dependencies](#dependencies)
@@ -27,6 +33,8 @@ The objective of this framework is not to add to the open source community as it
 
 From this project I've learned some new concepts as well as went over again some already known concepts.
 
+### Composition vs Inheritance
+
 I learned the **real difference between _composition vs inheritance_ in JavaScript**. Composition vs inheritance is a generally misunderstood concept. This was a concept first introduced at the book [Design Patterns, Elements of Reusable Object-Oriented Software](http://www.uml.org.cn/c++/pdf/designpatterns.pdf), 1994, page 20, where its says: `"Favor object composition over class inheritance"`.
 
 Although most people understand composition as a simple concept where you can just simply _Object.assign()_ an object's attributes and methods to another object.
@@ -39,15 +47,25 @@ You can read more about this on the book, or you can also learn more about this 
 
 Thanks to this course I've not only strenthened the knowledge of the difference between composition and inheritance, but also the different ways to implement them as well as when and where to implement which, depending on the context.
 
+### MVP
+
 Another concept I've learned from this course is the functionality and difference between a **framework's Models and Views**, as well as how to implement them, its restrictions, and requirements.
+
+### Typescript Generics
 
 Also I've learned and strengthened some very TypeScript-specific concepts, for example **Generics**, a very useful but advanced topic.
 
 I've implemented as well different types of **Interfaces** and **Types**, using them as constraints for classes, more like "connectors" between them, as well as used them to my advantage to take the most out of **TypeScript's Static Type checks**.
 
+### Typescript's `<any>` type
+
 One of the most important concepts I've strenthened is the importance of making sure to have as less **`<any>` types** as possible, which can be tedious sometimes, but provides a lot of **type and error checks**, which is the great purpose of TypeScript.
 
-I've also practiced a little bit of **HTML** and **front-end javascript** which currently is not my strong point as I'm focusing on backend logic, so any kind of practice is welcome.
+### Frontend technologies
+
+I've also practiced a little bit of **HTML** and **frontend javascript** which currently is not my strong point as I'm focusing on backend logic, so any kind of practice is welcome.
+
+### Dependency Injection
 
 I also saw a little bit of **Dependency Injection** or at least a simple version of it (Collection.ts). This is a very important subject and what I saw here was not enough, so will have to git a bit more on this subject.
 
