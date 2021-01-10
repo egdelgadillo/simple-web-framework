@@ -2,7 +2,7 @@
 
 Simple Web Framework is a simple old-school-like javascript web framework built on TypeScript that resembles / is inspired on Backbone.js and Marionette.js.
 
-This framework and its implementation was made following the [Typescript: The Complete Developer's Guide [2020]](https://www.udemy.com/course/typescript-the-complete-developers-guide) course. Most of the design credit is granted to **[Stephen Grider](https://www.udemy.com/user/sgslo/)**, a shoutout to him, he's a great instructor. I recommend watching his courses.
+This framework and its implementation was made following the [Typescript: The Complete Developer's Guide [2020]](https://www.udemy.com/course/typescript-the-complete-developers-guide) course. Most of the design credit is granted to **[Stephen Grider](https://www.udemy.com/user/sgslo/)**, a shout out to him, he's a great instructor. I recommend watching his courses.
 
 _Some refactor has been made to make it easier to comment and explain on its functionality._
 
@@ -45,7 +45,7 @@ Instead of that, the book favors keeping an **instance** of the Object and **del
 
 You can read more about this on the book, or you can also learn more about this at Stephen's course, currently lesson number 123.
 
-Thanks to this course I've not only strenthened the knowledge of the difference between composition and inheritance, but also the different ways to implement them as well as when and where to implement which, depending on the context.
+Thanks to this course I've not only strengthened the knowledge of the difference between composition and inheritance, but also the different ways to implement them as well as when and where to implement which, depending on the context.
 
 ### MVP
 
@@ -59,7 +59,7 @@ I've implemented as well different types of **Interfaces** and **Types**, using 
 
 ### Typescript's `<any>` type
 
-One of the most important concepts I've strenthened is the importance of making sure to have as less **`<any>` types** as possible, which can be tedious sometimes, but provides a lot of **type and error checks**, which is the great purpose of TypeScript.
+One of the most important concepts I've strengthened is the importance of making sure to have as less **`<any>` types** as possible, which can be tedious sometimes, but provides a lot of **type and error checks**, which is the great purpose of TypeScript.
 
 ### Frontend technologies
 
@@ -69,31 +69,31 @@ I've also practiced a little bit of **HTML** and **frontend javascript** which c
 
 I also saw a little bit of **Dependency Injection** or at least a simple version of it (Collection.ts). This is a very important subject and what I saw here was not enough, so will have to git a bit more on this subject.
 
-But even more than anything I've strenthened my Javascript knowledge as a whole as well as TypeScript-related logic, syntax and good practices.
+But even more than anything I've strengthened my Javascript knowledge as a whole as well as TypeScript-related logic, syntax and good practices.
 
 ## Run
 
 To run the project you need to clone the repository.
 
-```
+```bash
 git clone https://github.com/egdelgadillo/simple-web-framework
 
-cd simple-web-famework
+cd simple-web-framework
 ```
 
 We now need to install the required dependencies.
 
-```
+```bash
 npm install
 ```
 
 After all dependencies are installed we can run the **start** script configured on the project's package.json.
 
-```
+```bash
 npm run start
 ```
 
-The project can be accessed at [http://localhost:1234/](http://localhost:1234/), while the RESTful API (Provided by the **json-sever** module) can be accessed at [http://localhost:3000/](http://localhost:3000/).
+The project can be accessed at [http://localhost:8080/](http://localhost:8080/), while the RESTful API (Provided by the **json-sever** module) can be accessed at [http://localhost:3000/](http://localhost:3000/).
 
 ## Required Modules
 
@@ -103,11 +103,9 @@ Dependencies:
 
 - json-server
 - axios
-
-Development Dependencies:
-
 - typescript
-- parcel-bundler
+- http-server
+- webpack
 - concurrently
 
 ### Dependencies
@@ -126,9 +124,13 @@ The **Axios** module is used to manage the RESTful API calls (In this case manag
 
 This module is self-explanatory. This is the base module of the development part of the project as it provides the basic TypeScript functionality.
 
-#### parcel-bundler
+#### http-server
 
-We use the the parcel-bundler module to serve and render the root `index.html` file on **localhost:1234** (By default). It also recognizes and handles the TypeScript file, compiles it to JavaScript and therefore is executed on the client-side. Thanks to this module we can import the **.ts** file directly to the `index.html` file with a simple `<script>` tag.
+We use the the http-server module to serve and render the root `index.html` file on **localhost:8080** (By default).
+
+#### webpack
+
+We use webpack to compile the TypeScript files to JavaScript and therefore is executed on the client-side. This enables us to use Typescript's import syntax without having to worry how will javascript handle it. It creates a javascript bundle for the `index.html` to use. This will be located at the `dist` folder.
 
 #### concurrently
 
@@ -158,24 +160,24 @@ The **models** folder mainly exports the **Model** class which also implements d
 - Attributes: Model Data Module
 - ApiSync: Model Data Sync Module
 
-All modules can be swapped just as easy as defining a new Model attribute and creating a new instance of it, as long as it comforms to each **interface** defined for each different module. Each interface work as a constrain, statically defining the required methods to work with the Model class.
+All modules can be swapped just as easy as defining a new Model attribute and creating a new instance of it, as long as it conforms to each **interface** defined for each different module. Each interface work as a constrain, statically defining the required methods to work with the Model class.
 
 As stated before, the Model class implements **the real concept of composition in javascript**, which means that it only stores **an instance** of the module instead of "copy / pasting" each module, its methods, attributes, etc to the Module class. This also means that it **delegates** each request to the corresponding module using its instances.
 
 As also stated before, each module conforms to its corresponding Model's interface, providing the required methods to work with it.
 The description of each module's functionality and their required methods are now explained:
 
-#### Eventing Module:
+#### Eventing Module
 
 This module resembles the functionality of the _Backbone.js_ framework providing `on()` and `trigger()` methods, which extends to all Models and also Collections (See Collection Section).
 
-#### Attributes Module:
+#### Attributes Module|
 
 This module handles the attributes of each Model, using **Generics**. This also resembles the functionality of _Backbone.js_ framework as it provides the `get()` and `set()` methods.
 
 #### The ApiSync Module
 
-The ApiSync module handles the syncronization of the Model data through an external API, following the **[RESTful APIs Conventions](https://restfulapi.net/resource-naming/)**. For that end the RESTful API is simulated with the **json-server** package. This data handling is done through the `save()` and `fetch()` methods.
+The ApiSync module handles the synchronization of the Model data through an external API, following the **[RESTful APIs Conventions](https://restfulapi.net/resource-naming/)**. For that end the RESTful API is simulated with the **json-server** package. This data handling is done through the `save()` and `fetch()` methods.
 
 #### The Collection Module
 
@@ -205,7 +207,7 @@ This is also an abstract class as it requires an implementation of both `templat
 
 ### Main Implementation Structure
 
-The main implementation of the web framework is bootstraped by the `index.ts` file and also consists of two main folders:
+The main implementation of the web framework is bootstrapped by the `index.ts` file and also consists of two main folders:
 
 - models
 - views
@@ -234,4 +236,4 @@ Finally, the `UserList.ts` file contains an implementation of the framework's **
 
 [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-I do not own most of the logic, and code ideas reflected in this repository, therefore the most appropiate license in this case I believe it to be the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+I do not own most of the logic, and code ideas reflected in this repository, therefore the most appropriate license in this case I believe it to be the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)

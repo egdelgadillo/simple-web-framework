@@ -5,7 +5,7 @@
  *
  * The Attributes class handles the Model's data, defining a private
  * data property, which can be only accessed from the class methods
- * get() and getAll() and only modified throught the set() method
+ * get() and getAll() and only modified through the set() method
  * This module has no dependencies whatsoever and is designed to be
  * used alongside the composition architecture
  */

@@ -23,7 +23,7 @@ export class UserEdit extends View<User, UserProps> {
   /*
    * This is the only implementation of the regionsMap() method that the
    * View class provides as a way to query for specific HTML elements and
-   * attatch to them some HTML elements. Those elements are first defined
+   * attach to them some HTML elements. Those elements are first defined
    * on the template() method with specific class tags which then are
    * being specified here.
    * The object returned by the regionsMap() method follows the
@@ -32,7 +32,7 @@ export class UserEdit extends View<User, UserProps> {
   regionsMap(): { [regionName: string]: string } {
     return {
       userShow: '.user-show',
-      userForm: '.user-form'
+      userForm: '.user-form',
     };
   }
 

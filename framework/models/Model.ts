@@ -72,7 +72,7 @@ type HasId = {
  * The only requirement the model will have is a must-have id property on the
  * instantiated model. This will be used to make the fetch and get requests on
  * the Sync module.
- * It only depends on Axios's type definitions to take advantage of TypeScript's
+ * It only depends on Axios' type definitions to take advantage of TypeScript's
  * type and error checking.
  */
 export class Model<T extends HasId> {
@@ -147,7 +147,7 @@ export class Model<T extends HasId> {
    * the Sync instance saved on the Model Class instance.
    * First it gets all the Model's data by utilizing the Attributes instance's
    * getAll() method and then it creates a new resource on the RESTful API utilizing
-   * the Sync instance's save() method. If data was succesfully saved then a
+   * the Sync instance's save() method. If data was successfully saved then a
    * 'save' event is triggered by the Eventing instance.
    */
   save = (): void => {

@@ -100,7 +100,7 @@ export abstract class View<T extends Model<K>, K> {
 
     for (let eventKey in eventsMap) {
       const [eventName, selector] = eventKey.split(':');
-      fragment.querySelectorAll(selector).forEach(element => {
+      fragment.querySelectorAll(selector).forEach((element) => {
         element.addEventListener(eventName, eventsMap[eventKey]);
       });
     }
@@ -134,7 +134,7 @@ export abstract class View<T extends Model<K>, K> {
    * when redefined by the user and also when the regionsMap() method returns
    * a non-empty object.
    * It is worth to mention that this function is called before document
-   * fragment is rendered to the View's parent element, uselful to render
+   * fragment is rendered to the View's parent element, useful to render
    * other HTML elements before that.
    */
   onRender(): void {}

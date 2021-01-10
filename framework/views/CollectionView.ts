@@ -10,11 +10,11 @@ import { Model } from '../models/Model';
  * The CollectionView class is a generic class which is in charge of
  * handling the collection data and rendering each item onto the browser.
  * How the data is rendered is up to the user who extends this abstract
- * class. The abstraction is necesary due to the renderItem() and template()
+ * class. The abstraction is necessary due to the renderItem() and template()
  * methods being required to be defined and implemented by the developer.
  * Also, as a generic class, requires a Model Type (T) and the Model
  * properties type (K).
- * To instatiate the CollecionView class it is required to provide a
+ * To instantiate the CollectionView class it is required to provide a
  * Collection type collection. It then is able to render the HTML string
  * returned from the template() method onto the parent Element whenever
  * render() is called and when 'change' events are triggered.
@@ -32,7 +32,7 @@ export abstract class CollectionView<T extends Model<K>, K> {
   /*
    * The template() method is an abstract method required to render the
    * HTML-type string returned from it onto the CollectionView's parent
-   * HTML element. This funcionality is similar to the View's module
+   * HTML element. This functionality is similar to the View's module
    * template() method.
    */
   abstract template(): string;
@@ -45,7 +45,7 @@ export abstract class CollectionView<T extends Model<K>, K> {
    * The constructor defines a 'change' event to call the render() method, which
    * ensures that whenever we fetch data we render that new data onto the browser.
    * This is required as the Collection's fetch is asynchronous.
-   * After that if fetches the Colelction's data by calling its fetch() method.
+   * After that if fetches the Collection's data by calling its fetch() method.
    */
   constructor(public parent: Element, public collection: Collection<T, K>) {
     this.collection.on('change', (): void => {

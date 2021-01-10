@@ -10,8 +10,8 @@ import { UserList } from './views/UserList';
 /*
  * A comment on the index.html file
  *
- * Each <div> tag is a View class or CollecionView class implementation
- * Therefore we mark each div's borders in order to be able to differentiate
+ * Each <div> tag is a View class or CollectionView class implementation
+ * Therefore we mark each div border in order to be able to differentiate
  * them from one another.
  */
 

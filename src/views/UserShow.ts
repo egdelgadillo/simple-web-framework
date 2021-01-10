@@ -8,13 +8,13 @@ import { User, UserProps } from '../models/User';
 
 /*
  * The UserShow class is the simplest of all the View class implementations.
- * It only redners an HTML template which will be used to show the current
+ * It only renders an HTML template which will be used to show the current
  * User Model's data. It acts as a child of the UserEdit class.
  */
 export class UserShow extends View<User, UserProps> {
   /*
    * Here we return the HTML-style string template which will later be converted
-   * and attatched to the parent's HTML element as a UserShow element.
+   * and attached to the parent's HTML element as a UserShow element.
    * As we are returning a template string we can use the ES6 syntax and bind
    * data directly to the HTML through the Model's get() method.
    */

@@ -1,14 +1,30 @@
 <html>
-  <style>div {
+  <style>
+    /* 
+    * Each <div> tag is a View class or CollectionView class implementation
+    * Therefore we mark each div border in order to be able to differentiate
+    * them from one another.
+    */
+    div {
       border: 1px black solid;
       padding: 20px;
       margin: 10px;
-    }</style>
+    }
+  </style>
   <body>
+    <!-- 
+      Here the CollectionView implementation will be rendered,
+      the UserList class.
+    -->
     <div id="user-list"></div>
-    <br>
+    <br />
+
+    <!-- 
+      Here the UserEdit implementation and therefore the 
+      UserForm and UserShow classes will be rendered.
+    -->
     <div id="root"></div>
 
-    <script src="/src.f10117fe.js"></script>
+    <script src="./bundle.js"></script>
   </body>
 </html>

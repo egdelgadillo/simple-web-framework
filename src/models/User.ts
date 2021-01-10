@@ -34,7 +34,7 @@ const rootUrl = 'http://localhost:3000/users';
  * it extends it. In this case inheritance was chosen over composition in order
  * to facilitate the calls to the Model's specific modules methods.
  * It implements two static methods which are used to simplify the creation of
- * new User instances whithout having the need to specify each instance of the
+ * new User instances without having the need to specify each instance of the
  * modules required by the Model or Collection classes.
  * It also provides a User class' specific method, setRandomAge() which will be
  * used on the views.
@@ -57,7 +57,7 @@ export class User extends Model<UserProps> {
   }
 
   /*
-   * The buildUserColletion() static method provides an easy way to start a
+   * The buildUserCollection() static method provides an easy way to start a
    * new User Collection instance without having to write all the Collection
    * class dependencies. It then returns the new instance of the created
    * Collection.
