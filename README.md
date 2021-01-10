@@ -8,6 +8,21 @@ _Some refactor has been made to make it easier to comment and explain on its fun
 
 The objective of this framework is not to add to the open source community as its code is outdated or useless compared to modern frameworks. It was only made for learning and proof-of-concept purposes.
 
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [What I've learned](#what-ive-learned)
+- [Run](#run)
+- [Required Modules](#required-modules)
+  - [Dependencies](#dependencies)
+  - [Development Dependencies](#development-dependencies)
+- [Structure](#structure)
+  - [Framework Structure](#framework-structure)
+  - [Framework's Model Structure](#frameworks-model-structure)
+  - [Framework's View Structure](#frameworks-view-structure)
+  - [Main Implementation Structure](#main-implementation-structure)
+- [License](#license)
+
 ## What I've learned
 
 From this project I've learned some new concepts as well as went over again some already known concepts.
